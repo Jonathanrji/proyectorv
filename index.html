@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto RV</title>
+    <!--A-frame library-->
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <!--environment-->
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+    <!--fisicas-->
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+</head>
+
+<body>
+    <a-scene physics="gravity:-9.8">
+        <!--Creamos la biblioteca de assets-->
+        <a-assets>
+            <!--casa-->
+            <a-asset-item id="casa" src=assets/models/casa/></a-asset-item>
+            <a-asset-item id="mtlCasa" src=assets/models/casa/></a-asset-item>
+        </a-assets>
+        <!-- particles
+        <a-entity position="0 2.25 -15" particle-system="color: #EF0000,#44CC00"></a-entity> -->
+        <!-- Camera -->
+        <a-entity id="rig" movement-controls kinematic-body>
+            <a-entity camera position="0 1.6 0" look-controls="pointerLockEnabled: true">
+            </a-entity>
+        </a-entity>
+
+        <a-plane scale="50 50 1" rotation="-90 0 0"  position="0 0 -1" static-body></a-plane>
+
+        <!--sound-->
+
+        <a-entity environment="preset: forest; fog: 0; ground: hills; groundYScale: 100 playArea: 5">
+        </a-entity>
+        <!--Importar modelo 3D-->
+        <a-entity obj-model="obj: #casa; mtl: #mtlCasa" position="10 0 0" static-body></a-entity>
+    </a-scene>
+</body>
+</html>
