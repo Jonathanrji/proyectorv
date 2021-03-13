@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environments + Modelos 3D</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script
+        src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script> 
+</head>
+
+<body>
+    <a-scene physics="gravity:-9.8">
+        <!--Creamos la biblioteca de assets-->
+        <a-assets>
+            <!--Creamos un asset item que traera nuestro objeto para ser renderizado en la escena-->
+            <a-asset-item id="armario" src=assets/models/armario.obj></a-asset-item>
+            <a-asset-item id="mtlarmario" src=assets/models/armario.mtl></a-asset-item>
+
+            <a-asset-item id="bombillo" src=assets/models/bombillo.obj></a-asset-item>
+            <a-asset-item id="mtlbombillo" src=assets/models/bombillo.mtl></a-asset-item>
+            
+            <a-asset-item id="cuadro" src=assets/models/cuadro.obj></a-asset-item>
+            <a-asset-item id="mtlcuadro" src=assets/models/cuadro.mtl></a-asset-item>
+            
+            <a-asset-item id="cuadrogrande" src=assets/models/cuadrogrande.obj></a-asset-item>
+            <a-asset-item id="mtlcuadrogrande" src=assets/models/cuadrogrande.mtl></a-asset-item>
+            
+            <a-asset-item id="mesita" src=assets/models/mesita.obj></a-asset-item>
+            <a-asset-item id="mtlmesita" src=assets/models/mesita.mtl></a-asset-item>
+            
+            <a-asset-item id="silla" src=assets/models/silla.obj></a-asset-item>
+            <a-asset-item id="mtlsilla" src=assets/models/silla.mtl></a-asset-item>  
+
+            <a-asset-item id="ventana" src=assets/models/ventana.obj></a-asset-item>
+            <a-asset-item id="mtlventana" src=assets/models/ventana.mtl></a-asset-item> 
+
+            <a-asset-item id="smarttv" src=assets/models/smarttv.obj></a-asset-item>
+            <a-asset-item id="mtlsmarttv" src=assets/models/smarttv.mtl></a-asset-item>  
+
+            <a-asset-item id="puerta" src=assets/models/puerta.obj></a-asset-item>
+            <a-asset-item id="mtlpuerta" src=assets/models/puerta.mtl></a-asset-item>       
+
+            <a-asset-item id="mascaradecoracion" src=assets/models/mascaradecoracion.obj></a-asset-item>
+            <a-asset-item id="mtlmascaradecoracion" src=assets/models/mascaradecoracion.mtl></a-asset-item>           
+        </a-assets>
+       
+        <!-- Camera -->
+        <a-entity id="rig" movement-controls kinematic-body>
+            <a-entity camera position="0 1.6 0" look-controls="pointerLockEnabled: true">
+            </a-entity>
+        </a-entity>
+
+        <a-entity position="0 2.25 -15" particle-system="preset: rain"></a-entity>
+
+        <a-plane scale="50 50 1" rotation="-90 0 0"  position="0 0 -1" static-body></a-plane>
+        </a-entity>
+
+        <a-plane scale="2 2 2" rotation="0 0 0"  position="0 1 -2" static-body></a-plane>
+        <!--Importar modelo 3D-->
+        <!--<a-entity obj-model="obj: #dragon; mtl: #mtlDragon" scale="0.01 0.01 0.01" position= "0 2.5 0"></a-entity>-->
+        <a-entity obj-model="obj: #armario; mtl: #mtlarmario" position="-2 0 -5" static-body></a-entity>
+        <a-entity obj-model="obj: #bombillo; mtl: #mtlbombillo" position="-2 0 -5" static-body></a-entity>
+        <a-entity obj-model="obj: #cuadro; mtl: #mtlcuadro" position="-2 0 -5" static-body></a-entity>
+        <a-entity obj-model="obj: #cuadrogrande; mtl: #mtlcuadrogrande" position="-2 0 -5" static-body></a-entity>
+        <a-entity obj-model="obj: #mesita; mtl: #mtlmesita" position="-2 0 -5" static-body></a-entity>
+        <a-entity obj-model="obj: #silla; mtl: #mtlsilla" position="-2 0 -5" static-body></a-entity>
+        <a-entity obj-model="obj: #ventana; mtl: #mtlventana" position="-2 0 -5" static-body></a-entity>
+        <a-entity obj-model="obj: #smarttv; mtl: #mtlsmarttv" position="-2 0 -5" static-body></a-entity>
+        <a-entity obj-model="obj: #puerta; mtl: #mtlpuerta" position="-2 0 -5" static-body></a-entity>
+        <a-entity obj-model="obj: #mascaradecoracion; mtl: #mtlmascaradecoracion" position="-2 0 -5" static-body></a-entity>
+    </a-scene>
+</body>
+
+</html>
