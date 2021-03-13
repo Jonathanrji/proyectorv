@@ -1,6 +1,6 @@
 # Primer Proyecto RV
 
-Desarrollar un recorrido en realidad virtual de una de nuestras casas campestres que sea visible usando la libreria de A-frame poder desplegar un buen producto que sea agradable a la vista del cliente.
+Desarrollar un recorrido en realidad virtual de uno de nuestro apartamento que sea visible usando la libreria de A-frame poder desplegar un buen producto que sea agradable a la vista del cliente.
 
 ## Comenzando 🚀
 
@@ -54,4 +54,7 @@ _Herramientas usadas para el projecto_
 * **Andres Calero** - [xXPawiXx](https://github.com/xXPawiXx)
 * **Jhonatan Rojas** - [Jonathanrji](https://github.com/Jonathanrji)
 * **Ricky Mosquera** - [FabianMosquera](https://github.com/FabianMosquera)
+
+
+
 
