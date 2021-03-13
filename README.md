@@ -54,6 +54,4 @@ _Herramientas usadas para el projecto_
 * **Andres Calero** - [xXPawiXx](https://github.com/xXPawiXx)
 * **Jhonatan Rojas** - [Jonathanrji](https://github.com/Jonathanrji)
 * **Ricky Mosquera** - [FabianMosquera](https://github.com/FabianMosquera)
-=======
-# Este proyecto consiste en desarrollar un recorrido en realidad virtual de una de nuestras casas campestres o un apartamento que sea accesible desde un navegador web por medio de un servidor local
->>>>>>> main
+
