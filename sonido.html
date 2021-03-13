@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+    <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <audio id="sonido" src="assets/musica/musica.mp3"></audio>
+        </a-assets>
+
+        <a-entity position="0 0 7">
+            <a-camera>
+                <a-cursor></a-cursor>
+            </a-camera>
+        </a-entity>
+
+        <a-cylinder color="#0088ff" height="5" position="-2 2.5 0" 
+        sound="src: #sonido; on: click">
+        </a-cylinder>
+    </a-scene>
+</body>
+
+</html>

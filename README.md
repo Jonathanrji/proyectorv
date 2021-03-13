@@ -54,3 +54,4 @@ _Herramientas usadas para el projecto_
 * **Andres Calero** - [xXPawiXx](https://github.com/xXPawiXx)
 * **Jhonatan Rojas** - [Jonathanrji](https://github.com/Jonathanrji)
 * **Ricky Mosquera** - [FabianMosquera](https://github.com/FabianMosquera)
+
