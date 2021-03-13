@@ -11,10 +11,29 @@
 <body>
     <a-scene>
         <!--add the src of th sky-->
-        <a-assets id="bosque" src="assets/image_360/Bosque.jpg"></a-assets>
+        <a-assets id="cali" src="assets/image_360/satara_night.jpg">
+            <!--Creamos un asset item que traera nuestro objeto para ser renderizado en la escena-->
+            <a-asset-item id="casa" src=assets/models/baseapto.obj></a-asset-item>
+            <a-asset-item id="mtlCasa" src=assets/models/baseapto.mtl></a-asset-item>
+
+            <!--add the sound-->
+            <audio id="sonido" src="assets/musica/musica.mp3"></audio>
+        </a-assets>
+
+        <!-- Camera -->
+        <a-entity id="rig" movement-controls kinematic-body>
+            <a-entity camera position="0 1.6 0" look-controls="pointerLockEnabled: true">
+            </a-entity>
+        </a-entity>
+
+        <a-plane scale="50 50 1" rotation="-90 0 0"  position="0 0 -1" static-body></a-plane>
 
         <!--add the sky in the environment-->
-        <a-sky src="#bosque"></a-sky>
+        <a-sky src="#cali"></a-sky>
+        <!--Importar modelos 3D-->
+        <a-entity obj-model="obj: #casa; mtl: #mtlCasa" position="0 0 10" static-body></a-entity>
+
+        <a-sound sound="src: #sonido; autoplay: true"></a-sound>
     </a-scene>
     
 </body>
